@@ -87,39 +87,6 @@ function showbars(move)
     }
 }
 
-
-function playInser(array)
-{
-    const moves=[];
-    
-    for(let i=0;i<array.length;i++)
-    {
-        let lowest=i;
-        for(let j=i+1;j<array.length;j++)
-        {
-            if(array[lowest]>array[j])
-            {
-                lowest=j;
-            }
-        }
-        moves.push({indices:[lowest,i], type:"compar"});
-        if(i!== lowest)
-        {
-            moves.push({indices:[lowest,i], type:"swap"});
-            [array[lowest], array[i]]=[array[i], array[lowest]];
-            
-
-        }
-    }
-
-return moves;
-}
-
-
-
-
-
-
 function selectionsort(array)
 {
     const moves=[];
